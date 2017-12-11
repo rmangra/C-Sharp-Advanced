@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace LambdaExpressions1
 {
@@ -12,14 +13,29 @@ namespace LambdaExpressions1
         {
             // Lambda expression syntax:
             // args => expression
-            number => number * number;
+            // number => number * number;
 
-            Console.WriteLine(Square(5));
+            // () = > ...
+            // x => ...
+            // (x, y, z) => ...
+
+            Func<int, int> square = number => number * number;
+
+            Console.WriteLine(square(5));
+
+            const int factor = 5;
+
+            Func<int, int> multiplier = n => n * factor;
+
+            var result = multiplier(10);
+
+            Console.WriteLine(result);
         }
 
-        static int Square(int number)
-        {
-            return number * number;
-        }
+        /*  static int Square(int number)
+            {
+                return number * number;
+            }
+        */
     }
 }
