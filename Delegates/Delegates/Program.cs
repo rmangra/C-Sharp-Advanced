@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Delegates
 {
@@ -18,6 +14,11 @@ namespace Delegates
 
             processor.Process("photo.jpg", filterHandler);
         }
-    }
+
+        static void RemoveRedEyeFilter(Photo photo)
+        {
+            Console.WriteLine("Apply RemoveRedEye");
+
+        }   
     }
 }
