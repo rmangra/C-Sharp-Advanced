@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Delegates
 {
-    public delegate void PhotoFilterHandler(Photo photo);
-
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
