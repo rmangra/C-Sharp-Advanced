@@ -10,7 +10,9 @@ namespace LambdaExpressions2
             {
                 new Book() {Title = "Title 1", Price = 5},
                 new Book() {Title = "Title 2", Price = 7},
-                new Book() {Title = "Title 3", Price = 17}
+                new Book() {Title = "Title 3", Price = 9},
+                new Book() {Title = "Title 4", Price = 12},
+                new Book() {Title = "Title 5", Price = 17}
             };
         }
     }
