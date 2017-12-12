@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -20,14 +19,6 @@ namespace EventsAndDelegates
             videoEncoder.VideoEncoded += messageService.OnVideoEncoded;
 
             videoEncoder.Encode(video);
-        }
-    }
-
-    public class MessageService
-    {
-        public void OnVideoEncoded(object source, EventArgs arg)
-        {
-            Console.WriteLine("MessageService: Sending a text message...");
         }
     }
 }
