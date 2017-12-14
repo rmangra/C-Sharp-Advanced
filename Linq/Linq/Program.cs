@@ -32,8 +32,27 @@ namespace Linq
             var aspbook = books.SingleOrDefault(b => b.Title == "ASP.NET MVC++");
             Console.WriteLine(aspbook == null);
 
-            var firstbook = books.First(b => b.Title == "C# Advanced Topics");
+            var firstbook = books.FirstOrDefault(b => b.Title == "C# Advanced Topics");
             Console.WriteLine(firstbook.Title + " " + firstbook.Price);
+
+            var lastbook = books.LastOrDefault(b => b.Title == "C# Advanced Topics");
+            Console.WriteLine(lastbook.Title + " " + lastbook.Price);
+
+            var pagedBooks = books.Skip(2).Take(3);
+            
+            foreach (var pagedbook in pagedBooks)
+                Console.WriteLine(pagedbook.Title);
+
+            var count = books.Count();
+            Console.WriteLine(count);
+
+            var maxPrice = books.Max(b => b.Price);
+            var minPrice = books.Min(b => b.Price);
+            var totalPrices = books.Sum(b => b.Price);
+            Console.WriteLine(maxPrice);
+            Console.WriteLine(minPrice);
+            Console.WriteLine(totalPrices);
+            
             //books.OrderBy(b => b.Title)
             //Func<int, int, int> add = (a, b) => a + b;
             //Console.WriteLine(add(2, 3));
