@@ -28,6 +28,12 @@ namespace Linq
             
             
             // More LINQ Extension Methods
+
+            var aspbook = books.SingleOrDefault(b => b.Title == "ASP.NET MVC++");
+            Console.WriteLine(aspbook == null);
+
+            var firstbook = books.First(b => b.Title == "C# Advanced Topics");
+            Console.WriteLine(firstbook.Title + " " + firstbook.Price);
             //books.OrderBy(b => b.Title)
             //Func<int, int, int> add = (a, b) => a + b;
             //Console.WriteLine(add(2, 3));
