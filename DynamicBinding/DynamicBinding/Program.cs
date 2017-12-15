@@ -10,6 +10,7 @@ namespace DynamicBinding
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
